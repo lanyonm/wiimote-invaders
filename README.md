@@ -10,7 +10,7 @@ The project uses [CWiid](https://github.com/abstrakraft/cwiid) Python library to
 The Python [websocket-client](http://pypi.python.org/pypi/websocket-client/0.8.0) is used to send messages from the Python program to the Node.js program.  The use of it is quite simple.
 
 #### Space Invaders HTML
-Travis is a coworker and awesome dev.  He built this a while back and I merely cloned it and converted the html to https://github.com/tmcwilliam/Space-Invaders
+Travis is a coworker and awesome dev.  He built this a while back and I merely cloned it and converted the html to jade. Original repo [here](https://github.com/tmcwilliam/Space-Invaders)
 
 ## Hardware
 
@@ -39,14 +39,23 @@ If you'd like to scan for bluetooh devices, try this:
     sudo apt-get install python-cwiid
     pip install websocket-client
 
+To test that you have the py bits working run ``python python/wiimote.py``.
+
 #### Node
 
     sudo apt-get install nodejs npm
+    npm rebuild
 
 ## Running
+If you're developing instead of just running:
 
     supervisor --watch . --extensions "node|js|jade|py" server.js
 
 ## Notes
 * It took some time to find a pair of websocket libs that would allow that Python and Node.js to talk to each other. I settled on ``websocket-client`` and ``websocket.io`` because they worked.
+* 
+
+## TODO
+* get the child spawn to keep python running after an exit
+* re-work python loop so that moving and shooting can happen at the same time
 * 
