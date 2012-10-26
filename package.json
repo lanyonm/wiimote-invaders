@@ -1,0 +1,20 @@
+{
+  "author": "Michael Lanyon",
+  "name": "wiimote-invaders",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "~3.0.0",
+    "jade": "~0.27.6",
+    "socket.io": "~0.9.10",
+    "websocket.io": "~0.2.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "./node_modules/mocha/bin/mocha --ignore-leaks test"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

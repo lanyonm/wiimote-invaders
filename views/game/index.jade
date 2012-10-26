@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  header
+    h1 Space Invaders
+  div.container.clearfix
+    div.info
+      p.info_label.lives Lives
+      p#player_lives.info_value
+      p.info_label.level Level
+      p#player_level.info_value
+      p.info_label.score Score
+      p#player_score.info_value
+      a(href='#', alt='help').help ?
+    div.hud
+      div#alert
+    div(style='display:none;')#instructions
+      a(href='#', alt='close').close X
+      ul
+        li|<pre>left arrow</pre> - move space ship left
+        li|<pre>right arrow</pre> - move space ship right
+        li|<pre>space bar</pre> - shoot
+        li|<pre>P</pre> - pause game
+    |<canvas id="space-invaders" width="500" height="300"></canvas>
+  p
+    span Action: 
+    span#action
